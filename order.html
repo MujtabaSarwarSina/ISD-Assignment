@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Details</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Foodies</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="index.html#foodContainer">Menu</a>
+        <a href="order.html">Cart</a>
+        <button id="darkBtn" onclick="toggleDarkMode()">🌙</button>
+    </div>
+</nav>
+
+<main>
+  <div class="order-box">
+      <h2>Your Order</h2>
+      <div id="orderItems"></div>
+      <div class="price-box">
+          <p>Subtotal: ৳<span id="subtotal">0</span></p>
+          <p>Delivery Fee: ৳50</p>
+          <p class="total">Total: ৳<span id="total">0</span></p>
+      </div>
+      <div class="order-buttons" id="orderActions">
+          <button class="primary-btn" id="checkoutBtn" onclick="showCheckoutForm()">Continue Checkout</button>
+          <a href="index.html"><button class="secondary-btn">Continue Shopping</button></a>
+      </div>
+
+      <!-- Checkout Form (hidden by default) -->
+      <div id="checkoutForm" style="display:none; margin-top:20px;">
+          <h3>Checkout Information</h3>
+          <input type="text" id="customerName" placeholder="Full Name" style="width:100%; margin:6px 0; padding:8px; border-radius:6px; border:1px solid #ccc;">
+          <input type="tel" id="customerPhone" placeholder="Phone Number" style="width:100%; margin:6px 0; padding:8px; border-radius:6px; border:1px solid #ccc;">
+          <input type="email" id="customerEmail" placeholder="Email Address" style="width:100%; margin:6px 0; padding:8px; border-radius:6px; border:1px solid #ccc;">
+          <textarea id="customerAddress" placeholder="Delivery Address" style="width:100%; margin:6px 0; padding:8px; border-radius:6px; border:1px solid #ccc;"></textarea>
+          <textarea id="customerNotes" placeholder="Additional Notes" style="width:100%; margin:6px 0; padding:8px; border-radius:6px; border:1px solid #ccc;"></textarea>
+          <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+              <button class="primary-btn" onclick="placeFinalOrder()">Place Order</button>
+              <button class="secondary-btn" onclick="cancelCheckout()">Cancel</button>
+          </div>
+      </div>
+  </div>
+</main>
+
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <h3>Order Placed!</h3>
+        <p>Thank you for your purchase. Your food will be delivered soon.</p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+<footer class="footer">
+    <h3>Foodies</h3>
+    <p>© Food Ordering Website designed by Mujtaba Sarwar - 2023200010050. All rights reserved.</p>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/order.js"></script>
+<script src="js/order-checkout.js"></script>
+</body>
+</html>
