@@ -6,4 +6,6 @@ Information System Design (CSE345.9)
 
 UI Design Assignment
 
-Food Ordering Website (2 Pages)
+Food Ordering Website 
+
+Note : please preview the website in computer instead of mobile for better experience. 
